@@ -14,7 +14,9 @@ The user can choose between cities and filter by month, day or not at all. Depen
 Statistics on the most frequent times of travel, the most popular stations and trips, on the total and average trip duration and on bikeshare users are displayed. 
 
 ### Files used
-The data comes from three csv files, one for each city (Chicago, New York, Washington). Depending on the selected city, the data will be loaded. 
+The data comes from three csv files, one for each city (Chicago, New York, Washington). All three of the data files contain six columns with start time, end time, trip duration, start station, end station and user type. The Chicago and New York City files have the additional columns Gender and Birth Year.
+
+Depending on the selected city, the data will be loaded. 
 
 We have Python 3, NumPy, and pandas installed using Anaconda as well as a text editor. 
 
