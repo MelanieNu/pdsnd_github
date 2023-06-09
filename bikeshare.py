@@ -82,7 +82,7 @@ def load_data(city, month, day):
 		df = df[df['day_of_week'] == day.title()]
 	return df
 
-def display_data(df):
+def show_data(df):
 	"""
 	Ask user whether they want to see the raw data. If yes, first 5 rows are displayed. 
 	Then the user is asked again whether they want to see 5 more rows. If yes, 10 rows are displayed. This goes on until user says no.
@@ -168,7 +168,7 @@ def main():
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
-        display_data(df)
+        show_data(df)
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
