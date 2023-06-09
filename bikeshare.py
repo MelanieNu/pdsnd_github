@@ -25,13 +25,13 @@ def get_filters():
 			print('That is not a valid city name. Please choose Chicago, New York, or Washington')
 	while True:
 		# get user input for the filter that will be applied
-		filter_by=input('Would you like to filter the data by month, day, or not at all?').casefold()
-		if filter_by in ['month','day','not at all']:
+		filter=input('Would you like to filter the data by month, day, or not at all?').casefold()
+		if filter in ['month','day','not at all']:
 			break
 		else:
 			print('That is not a valid filter.Please choose month, day, or not at all.')
 	# get user input for the month (january, february, ... , june)
-	if filter_by=='month':
+	if filter=='month':
 		day='all'
 		while True:
 			month=input('Which month - January, February, March, April, May, or June?').casefold()
@@ -40,7 +40,7 @@ def get_filters():
 			else: 
 				print('That is not a valid month. Please choose January, February, March, April, May, or June.')
 	# get user input for the the day (Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday)
-	elif filter_by=='day':
+	elif filter=='day':
 		month='all'
 		while True:
 			day=input('Which day - Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday?').casefold()
@@ -53,7 +53,7 @@ def get_filters():
 		day='all'
 	print('-'*40)
 	print('City: ', city)
-	print('The data is filtered by: ',filter_by)
+	print('The data is filtered by: ',filter)
 	print('The month included: ', month)
 	print('The day included: ', day)
 	return city, month, day
